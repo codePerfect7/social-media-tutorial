@@ -67,6 +67,7 @@ def logout():
 
 
 @views.route('create-post', methods=['GET', 'POST'])
+@login_required
 def create_post():
     if request.method == 'POST':
         link = request.form.get('link')
